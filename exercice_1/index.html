@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+
+<body>
+    <h1>LE BADMINTON</h1>
+    <p>Sport bien plus populaire dans les contrées asiatiques que les notres, il reste néanmoins apprécier en Europe.
+        Viktor Axelsen, dernier champion olympique en date, en est la preuve, le Danemark est le seul pays de l'ouest à
+        résister aux mastondontes chinois, malaysiens, indonésiens, japonais et taïwanais. Du moins chez les hommes, la
+        fierté nationale espagnole Carolina Marin, quant à elle, a longtemps régné sur le simple dame !</p>
+    <h2>Un peu de calcul ?</h2>
+    <p>Voici mon année de naissance : 1993. Le but ici va être de convertir ce nombre en décimal en nombre binaire et en nombre héxadécimal.</p>
+    <article>
+        <h3>Décimal vers Binaire :</h3>
+        <p>On commence par chercher la puissance de 2 la plus proche de 1993 tout en restant inférieur, soit 2^10 (1024). On sait maintenant que la solution contiendra 11 chiffres.</p>
+        <p>On fait maintenant la différence entre les deux : 1993 - 1024 = 969. Et le snombre étant plus grand que 1024, on sait qu'il sera de la forme : 1xxxxxxxxxx.</p>
+        <p>Ensuite on recommence avec le résultat : 969 - 512 (puissance de 2 suivante) = 457. De même 969 étant plus grand que 512, nous avons maintenant : 11xxxxxxxx.</p>
+        <p>En faisant ainsi de suite, on obtient : 457 - 256 = 201, 201 - 128 = 73, 73 - 64 = 9, 9 &lt; 32, 9 &lt; 16, 9 - 8 = 1, 1 &lt; 4, 1 &lt; 2, 1 - 1 = 0</p>
+        <p>Ce qui nous donne pour finir 1993 (base 10) = 11111001001 (base 2)</p>
+    </article>
+    <article>
+        <h3>Décimal vers Hexadécimal :</h3>
+        <p>Cela va ressembler à la méthode binaire mais avec les puissance de 16 avec quelques particularités.</p>
+        <p>Alors : 1993 / 256 (la puissance suivante est trop haute) = 7,7... Ici on ne s'intéressera qu'aux nombres avant la virgule. Donc 7 sera notre premier chiffre.</p>
+        <p>On fait ensuite la différence entre l'approximation multipliée par la puissance de 16 et le nombre décimal, soit : 1993 - (7 * 256) = 201.</p>
+        <p>On recommence avec 201 : 201 / 16 = 12,6... Encore une fois on garde le 12 (sachant qu'en héxadécimal 12 = C). On a pour l'instant 7Cx. Il ne manque que le dernier.</p>
+        <p>201 - (12 * 16) = 9. C'est notre dernier élément, on a donc : 1993 (base 10) = 7C9 (base 16).</p>
+    </article>
+</body>
+
+</html>

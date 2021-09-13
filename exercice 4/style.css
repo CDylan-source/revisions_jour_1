@@ -1,22 +1,39 @@
-body{
-    background:center center fixed url(fond.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 3rem;
+* {
+    list-style: none;
 }
 
-h1{
-    color: black;
+body {
+    background-color: black;
+}
+
+h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     letter-spacing: 0.1rem;
 }
 
-section{
+section {
     max-width: 90vw;
     margin-bottom: 5rem;
 }
 
-section img, section p{
+section img,
+section p {
     max-width: 80vw;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1fr 1fr;
+    color: lightgrey;
+    padding: unset;
+}
+
+li{
+    justify-self: center;
+}
+
+li>p::first-letter{
+    color:lightgreen;
 }

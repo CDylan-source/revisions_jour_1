@@ -1,0 +1,110 @@
+* {
+    margin: unset;
+    padding: unset;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: min(6vh, 8rem);
+    color: white;
+
+}
+
+body>div {
+    background: top center fixed url(riddle.jpg);
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    background-image: url(h1.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: contain;
+    filter: brightness(200%);
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    max-width: 90vw;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #f87f28;
+}
+
+section {
+    max-width: 90vw;
+}
+
+p {
+    padding-bottom: 1rem;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: skyblue;
+}
+
+ul {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: min(5rem, 4vw);
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    height: 5rem;
+}
+
+li {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    background-color: #e6e6e6;
+    color: #1c1c1c;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid #e6e6e6;
+    height:fit-content;
+}
+
+li:hover {
+    border: 5px solid tomato;
+}
+
+li:nth-of-type(3):hover{
+    border: 5px solid greenyellow;
+}
+
+@media (min-width: 1024px){
+    p{
+        text-align: center;
+        max-width: 50vw;
+        padding-bottom: 2rem;
+    }
+
+    body{
+        row-gap: min(6rem, 8vh);
+    }
+}

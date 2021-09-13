@@ -37,3 +37,18 @@ li{
 li>p::first-letter{
     color:lightgreen;
 }
+
+p>span{
+    color: lightgreen;
+}
+
+section:nth-of-type(4)>ul{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    max-width:90vw;
+    color: lavender;
+    text-align: center;
+}

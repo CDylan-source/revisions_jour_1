@@ -79,15 +79,55 @@
                 <p>x&nbsp: exécution</p>
             </li>
         </ul>
-        <p>Ensuite, après la première lettre, le tout va être divisé en trois parties, les droits propriétaires, les
+        <p class="text-white pb-3">Ensuite, après la première lettre, le tout va être divisé en trois parties, les
+            droits propriétaires, les
             droits du groupe propriétaire et les autres utilisateurs. Avec&nbsp:</p>
         <ul>
             <li>
-                <p></p>
+                <p>u&nbsp: propriétaire</p>
+            </li>
+            <li>
+                <p>g&nbsp: groupe</p>
+            </li>
+            <li>
+                <p>o&nbsp: autres</p>
+            </li>
+            <li>
+                <p>a&nbsp: tous</p>
             </li>
         </ul>
+        <p class="text-white pb-3">En pratique, cela donne ceci&nbsp:<br><span>"chmod rwx -u
+                nom_du_fichier_ou_dossier"</span><br>donnera tous les droits au propriétaire. Il est bon aussi de savoir
+            que r, w et x valent respectivement 4, 2 et 1. Donc que<br><span>"chmod 775
+                nom_du_fichier_ou_dossier"</span><br>donnera : drwxrwx-wx. On se sent un peu plus libre déjà non&nbsp?
+        </p>
+        <img src="open.jpg" alt="Un magnifique paysage naturel" class="rounded">
     </section>
 
+    <section class="flex flex-column justify-content-center align-items-center">
+        <header>
+            <h2 class="text-secondary pb-3">La commande chown&nbsp:</h2>
+        </header>
+        <p class="text-white pb-3">Malheureusement, cela ne suffira pas toujours, en effet, on ne peut pas être en root
+            partout&nbsp! C'est là qu'intervient la commande <span>"chown"</span>. Avec cet outil, le propriétaire sera
+            changé du créateur à celui choisi. Voici deux commandes examples&nbsp:</p>
+        <ul>
+            <li>
+                <p><span>"chown -R nom test"</span></p>
+            </li>
+            <li>
+                <p><span>"chown nom:groupe test.txt"</span></p>
+            </li>
+        </ul>
+        <p class="text-white pb-3">La première a la particularité de changer de propriétaire récursivement, c'est à dire
+            que tous les sous-fichiers et sous dossiers de test seront concernés. La deuxième, quant à lui, change et le
+            propriétaire et le groupe propriétaire du fichier test.txt.</p>
+        <img src="espace.jpg" alt="Photo de la terre depuis l'espace" class="rounded">
+    </section>
+
+    <footer class="pb-4">
+        <h4>Et voilà&nbsp! Vous avez les bases pour vous en sortir face aux problèmes de droit maintenant&nbsp!</h4>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">

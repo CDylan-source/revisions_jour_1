@@ -25,10 +25,11 @@ section {
     inset -34px 34px 34px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    height: 15vh;
+    min-height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 section p{
@@ -64,11 +65,18 @@ section:nth-of-type(2)>div{
 }
 
 #multiple_events button{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    border-radius: 20px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
     background-color: lightgreen;
-    transition: ease-in-out 0.5s;
+}
+
+#value input{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.8rem;
+}
+
+#value button{
+    
 }

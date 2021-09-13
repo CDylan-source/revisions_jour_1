@@ -2,4 +2,21 @@ body{
     background:center center fixed url(fond.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 3rem;
+}
+
+h1{
+    color: black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+section{
+    max-width: 90vw;
+    margin-bottom: 5rem;
+}
+
+section img, section p{
+    max-width: 80vw;
 }

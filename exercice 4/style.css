@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #1c1c1c;
 }
 
 h1 {
@@ -51,4 +51,27 @@ footer{
     max-width:90vw;
     color: lavender;
     text-align: center;
+}
+
+@media (min-width: 1024px){
+    p{
+        font-size: 1.1rem;
+    }
+
+    h2{
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    section{
+        max-width: 60vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section p, section img{
+        max-width: 60vw;
+        max-height: 40vh;
+    }
+    
 }

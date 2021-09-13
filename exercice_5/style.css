@@ -75,8 +75,50 @@ section:nth-of-type(2)>div{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+#value input:focus{
+    outline-style: none;
 }
 
 #value button{
-    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+#value button:focus{
+    outline-style: none;
+}
+
+#generator p{
+    margin-bottom: 0.8rem;
+}
+
+#generator button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+#generator button:focus {
+    outline-style: none;
+}
+
+button:hover{
+    transition: ease-in-out 0.5s;
+    background-color: lightgreen;
+}
+
+#multiple_events button:hover{
+    background-color: orangered;
 }

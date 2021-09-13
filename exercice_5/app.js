@@ -48,3 +48,17 @@ button.addEventListener('click', function(){
         }
     }
 });
+
+const caract = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN&éàùêâûôèîçäëïüöÉÀÙÊÂÛÔÎÈÇÄËÏÜÖ?!§$£€*%(){}-_~#[]*+";
+const numb = Array('8', '9', '10', '11', '12', '13', '14', '15', '16');
+const generate = document.querySelector('#generator button');
+const p_generator = document.querySelector('#generator p');
+generate.addEventListener('click', function(){
+    p_generator.innerHTML = "";
+    let numbtimes = Math.floor(Math.random() * numb.length);
+    let times = numb[numbtimes];
+    for(i =0; i < times; i++){
+        let number = Math.floor(Math.random() * caract.length);
+        p_generator.innerHTML += caract[number];
+    }
+});

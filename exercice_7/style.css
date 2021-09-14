@@ -1,0 +1,58 @@
+*{
+    padding: unset;
+    margin: unset;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+div{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: center center fixed url(car_m.jpg);
+    background-size: cover;
+    transform: translate(0, -100vh);
+    z-index: -1;
+}
+
+
+.deroule{
+    transform: translate(0, 0);
+    transition: ease-in 3s;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    transform: translate(0, 100vh);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    letter-spacing: 0.1rem;
+    color: navy;
+
+}
+
+.deroule_h1{
+    transform: translate(0, 0);
+    transition: ease-in 3s;
+}
+
+p{
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: lightgreen;
+    opacity: 0;
+}
+
+.deroule_p{
+    opacity: 1;
+    color: navy;
+    transition: ease-in 4s;    
+}

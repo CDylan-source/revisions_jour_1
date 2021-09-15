@@ -34,12 +34,12 @@ function verify_date(birthday) {
                 window.alert("Pas de 13ème mois et encore moins de plus que ça dans la réalité !");
             } else {
                 let curr_date = new Date();
-                
+
                 let curr_year = curr_date.getFullYear();
                 let curr_month = curr_date.getMonth() + 1;
                 let curr_day = curr_date.getDay();
                 console.log(curr_month);
-                if (year > curr_year || (year == curr_year && curr_month > month) || (year == curr_year && curr_month == month && curr_day >= day)) {
+                if (year > curr_year || (year == curr_year && curr_month < month) || (year == curr_year && curr_month == month && curr_day <= day)) {
                     window.alert("Tu n'es pas encore né-e !");
                 } else if (month == 4 || month == 6 || month == 9 || month == 11) {
                     if (day < 31) {
@@ -55,7 +55,7 @@ function verify_date(birthday) {
                             }
                         } else {
                             let age = curr_year - (parseInt(year) + 1);
-                            
+
                             if (age >= 25) {
                                 window.alert("Bienvenue");
                             } else {
@@ -70,91 +70,91 @@ function verify_date(birthday) {
                         window.alert("Il n'y a pas 31 jours dans ce mois pardi !");
                     }
                 } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+
                     if (curr_day >= day && curr_month == month || curr_month > month) {
                         let age = curr_year - year;
-                        if (curr_day >= day && curr_month == month || curr_month > month) {
-                            let age = curr_year - year;
-                            if (age >= 25) {
-                                window.alert("Bienvenue");
-                            } else {
-                                let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                let diff = birthday - curr_date;
-                                let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                window.alert("Il faut attendre encore " + aff + " jours")
-                            }
+                        if (age >= 25) {
+                            window.alert("Bienvenue");
                         } else {
-                            let age = curr_year - (parseInt(year) + 1);
-                            if (age >= 25) {
-                                window.alert("Bienvenue");
-                            } else {
-                                let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                let diff = birthday - curr_date;
-                                let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                window.alert("Il faut attendre encore " + aff + " jours")
-                            }
+                            let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                            let diff = birthday - curr_date;
+                            let aff = Math.floor(diff / (1000 * 3600 * 24));
+                            window.alert("Il faut attendre encore " + aff + " jours")
                         }
                     } else {
-                        $a = year % 4;
-                        $b = year % 100;
-                        $c = year % 400;
-                        if ($a == 0 && $b != 0 || $c == 0) {
-                            if (day < 30) {
-                                if (curr_day >= day && curr_month == month || curr_month > month) {
-                                    let age = curr_year - year;
-                                    if (age >= 25) {
-                                        window.alert("Bienvenue");
-                                    } else {
-                                        let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                        let diff = birthday - curr_date;
-                                        let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                        window.alert("Il faut attendre encore " + aff + " jours")
-                                    }
-                                } else {
-                                    let age = curr_year - (parseInt(year) + 1);
-                                    if (age >= 25) {
-                                        window.alert("Bienvenue");
-                                    } else {
-                                        let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                        let diff = birthday - curr_date;
-                                        let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                        window.alert("Il faut attendre encore " + aff + " jours")
-                                    }
-                                }
-                            } else {
-                                window.alert("Pas autant de jours en février !");
-                            }
+                        let age = curr_year - (parseInt(year) + 1);
+                        if (age >= 25) {
+                            window.alert("Bienvenue");
                         } else {
-                            if (day < 29) {
-                                if (curr_day >= day && curr_month == month || curr_month > month) {
-                            let age = curr_year - year;
-                            if (age >= 25) {
-                                window.alert("Bienvenue");
-                            } else {
-                                let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                let diff = birthday - curr_date;
-                                let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                window.alert("Il faut attendre encore " + aff + " jours")
-                            }
-                        } else {
-                            let age = curr_year - (parseInt(year) + 1);
-                            if (age >= 25) {
-                                window.alert("Bienvenue");
-                            } else {
-                                let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
-                                let diff = birthday - curr_date;
-                                let aff = Math.floor(diff / (1000 * 3600 * 24));
-                                window.alert("Il faut attendre encore " + aff + " jours")
-                            }
-                        }
-                            } else {
-                                window.alert("Pas autant de jours en février !");
-                            }
+                            let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                            let diff = birthday - curr_date;
+                            let aff = Math.floor(diff / (1000 * 3600 * 24));
+                            window.alert("Il faut attendre encore " + aff + " jours")
                         }
                     }
-
-
+                } else if (month == 2){
+                    console.log('hello');
+                    $a = year % 4;
+                    $b = year % 100;
+                    $c = year % 400;
+                    if ($a == 0 && $b != 0 || $c == 0) {
+                        if (day < 30) {
+                            if (curr_day >= day && curr_month == month || curr_month > month) {
+                                let age = curr_year - year;
+                                if (age >= 25) {
+                                    window.alert("Bienvenue");
+                                } else {
+                                    let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                                    let diff = birthday - curr_date;
+                                    let aff = Math.floor(diff / (1000 * 3600 * 24));
+                                    window.alert("Il faut attendre encore " + aff + " jours")
+                                }
+                            } else {
+                                let age = curr_year - (parseInt(year) + 1);
+                                if (age >= 25) {
+                                    window.alert("Bienvenue");
+                                } else {
+                                    let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                                    let diff = birthday - curr_date;
+                                    let aff = Math.floor(diff / (1000 * 3600 * 24));
+                                    window.alert("Il faut attendre encore " + aff + " jours")
+                                }
+                            }
+                        } else {
+                            window.alert("Pas autant de jours en février !");
+                        }
+                    } else {
+                        if (day < 29) {
+                            if (curr_day >= day && curr_month == month || curr_month > month) {
+                                let age = curr_year - year;
+                                if (age >= 25) {
+                                    window.alert("Bienvenue");
+                                } else {
+                                    let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                                    let diff = birthday - curr_date;
+                                    let aff = Math.floor(diff / (1000 * 3600 * 24));
+                                    window.alert("Il faut attendre encore " + aff + " jours")
+                                }
+                            } else {
+                                let age = curr_year - (parseInt(year) + 1);
+                                if (age >= 25) {
+                                    window.alert("Bienvenue");
+                                } else {
+                                    let birthday = new Date((25 + parseInt(year)) + "-" + month + "-" + day + " " + curr_date.getHours() + ":" + curr_date.getMinutes() + ":" + (curr_date.getSeconds() + 1));
+                                    let diff = birthday - curr_date;
+                                    let aff = Math.floor(diff / (1000 * 3600 * 24));
+                                    window.alert("Il faut attendre encore " + aff + " jours")
+                                }
+                            }
+                        } else {
+                            window.alert("Pas autant de jours en février !");
+                        }
+                    }
                 }
+
+
             }
+
         }
     } else {
         window.alert("Ce ne sont pas des nombres !");

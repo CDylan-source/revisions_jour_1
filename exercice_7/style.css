@@ -227,7 +227,7 @@ button::before {
 
 @media (min-width : 728px){
     body>div{
-        background: bottom right fixed url(car.jpg);
+        background: bottom -20vh right fixed url(car.jpg);
         background-size: cover;
     }
 }

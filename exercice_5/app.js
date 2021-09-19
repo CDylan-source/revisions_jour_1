@@ -2,7 +2,8 @@ const create = document.getElementById('create');
 create.appendChild(document.createElement("p"));
 const firstname = "Dylan";
 const lastname = "Chapuis";
-create.lastChild.innerHTML = "Votre nom est <span>" + lastname + "</span> et votre prénom est <span>" + firstname + "</span>";
+// create.lastChild.innerHTML = "Votre nom est <span>" + lastname + "</span> et votre prénom est <span>" + firstname + "</span>";
+create.lastChild.innerHTML = `Votre nom est <span>${lastname}</span> et votre prénom est <span>${firstname}</span>`;
 
 const square = document.querySelector('#unique_event div');
 console.log(square);

@@ -224,3 +224,10 @@ button::before {
         transform: translate(0, -66.666%);
     }
 }
+
+@media (min-width : 728px){
+    body>div{
+        background: bottom right fixed url(car.jpg);
+        background-size: cover;
+    }
+}
